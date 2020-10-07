@@ -89,7 +89,7 @@ class CAE(object):
         model = models.Sequential()
 
         #  input layer
-        model.add(Lambda(self.cae_data_input, input_shape = self.img_shape))
+        model.add(Input(self.img_shape))
 
         # encoding
         model = self.encoding_path(model)
